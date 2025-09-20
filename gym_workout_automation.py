@@ -153,9 +153,9 @@ else:
 
     """
 
-sender_email = "abhiramrnair2000@gmail.com"
-receiver_email = "abhiramr2000@gmail.com"
-app_password = "bnrr ubau moxl xgth"
+sender_email = "sendermail@gmail.com" 
+receiver_email = "receivermail@gmail.com"
+app_password = "xxxx xxxx xxxx xxxx" # here you need to activate the 2 step varification on your google account and add password to your mail in app password section.
 
 subject = f"Daily workout plan - {day} 💪💪."
 
@@ -169,6 +169,7 @@ with smtplib.SMTP("smtp.gmail.com", 587) as server:
     server.starttls()
     server.login(sender_email, app_password)
     server.sendmail(sender_email, receiver_email, msg.as_string())
+
 
 
 
